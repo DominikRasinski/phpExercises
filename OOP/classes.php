@@ -13,7 +13,8 @@ class Person {
     }
 
     public function convertHeightToMilimeters(){
-        echo ($this->height * 10);
+        echo ($this->height * 10); // metoda wykorzystujaca pseudo-zmienna 'this', ktora referuje do obiektu wywolujacego
+        // i automatycznie ma dostep do publicznych wlasiwosci klasy
     }
 
 }
@@ -31,6 +32,6 @@ echo $dominik->age . "</br>";
 
 $dominik->speak(); //wywolanie metody w obiekcie
 
-$dominik->height = 183;
+$dominik->height = 183; 
 
 $dominik->convertHeightToMilimeters();
